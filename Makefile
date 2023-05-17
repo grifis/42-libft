@@ -1,5 +1,5 @@
 NAME = libft.a
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c
 OBJS = $(SRCS:%.c=%.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
