@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:06:04 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/18 11:34:49 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/18 11:41:38 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ int	ft_isalpha(int c)
 
 // int	main(void)
 // {
-// 	char c = 'a';
-// 	printf("%d\n", ft_isalpha(c));
-// 	printf("%d\n", isalpha(c));
+// 	printf("%d\n", ft_isalpha('a'));
+// 	printf("%d\n", isalpha('a'));
 
 //     printf("%d\n", ft_isalpha('A'));
 //     printf("%d\n", isalpha('A'));
