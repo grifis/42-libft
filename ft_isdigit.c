@@ -6,12 +6,12 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 17:04:14 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/17 19:18:15 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/18 11:37:42 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_isdigit(int c)
 {
@@ -21,8 +21,14 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-int	main(void)
-{
-	printf("%d\n", ft_isdigit('0'));
-	printf("%d\n", isdigit('0'));
-}
+// int	main(void)
+// {
+// 	printf("ft_isdigit: %d\n", ft_isdigit('0'));
+// 	printf("isdigit: %d\n", isdigit('0'));
+
+//     printf("ft_isdigit: %d\n", ft_isdigit('9'));
+//     printf("isdigit: %d\n", isdigit('9'));
+
+//     printf("ft_isdigit: %d\n", ft_isdigit('a'));
+//     printf("isdigit: %d\n", isdigit('a'));
+// }
