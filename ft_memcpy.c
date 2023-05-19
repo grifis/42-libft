@@ -6,11 +6,12 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 15:17:42 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/19 16:03:03 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/19 20:28:11 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <stdio.h>
 // #include <string.h>
 
@@ -19,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*d;
 	unsigned const char	*s;
 
-	if(dst == NULL && src == NULL)
+	if (dst == NULL && src == NULL)
 		return (dst);
 	d = (unsigned char *)dst;
 	s = (unsigned const char *)src;
