@@ -2,5 +2,8 @@
   "[c]": {
     "editor.defaultFormatter": "keyhr.42-c-format"
   },
-  "cSpell.words": ["LIBFT"]
+  "cSpell.words": ["LIBFT"],
+  "files.associations": {
+    "string.h": "c"
+  }
 }
