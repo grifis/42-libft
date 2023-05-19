@@ -4,6 +4,7 @@
   },
   "cSpell.words": ["LIBFT"],
   "files.associations": {
-    "string.h": "c"
+    "string.h": "c",
+    "stdio.h": "c"
   }
 }

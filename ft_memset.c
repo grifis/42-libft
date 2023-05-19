@@ -6,11 +6,12 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:45:49 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/19 11:22:56 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/19 20:06:07 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <stdio.h>
 // #include <string.h>
 
@@ -19,7 +20,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)b;
-	while (len-- > 0)
+	while (len--)
 	{
 		*ptr = (unsigned char)c;
 		ptr++;
