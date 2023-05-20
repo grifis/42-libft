@@ -6,7 +6,7 @@
 /*   By: yutabe <yutabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:12:41 by yutabe            #+#    #+#             */
-/*   Updated: 2023/05/20 20:38:38 by yutabe           ###   ########.fr       */
+/*   Updated: 2023/05/20 20:40:01 by yutabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,40 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*s;
-	size_t	len_dst;
-	size_t	res;
-	size_t	len_src;
-	size_t	i;
+	char		*d;
+	const char	*s;
+	int			writable;
+	int			dst_n;
 
-	s = (char *)src;
-	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(s);
-	res = 0;
-	i = 0;
-	if (size > len_dst)
-		res = len_src + len_dst;
-	else
-		res = len_src + size;
-	while (s[i] && (len_dst + 1) < size)
+	writable = dstsize - ft_strlen(dst) - 1;
+	if (dstsize <= ft_strlen(dst))
+		return (ft_strlen(src) + dstsize);
+	d = dst;
+	s = src;
+	dst_n = ft_strlen(dst);
+	while (*d != '\0')
+		d++;
+	while (writable-- && *s)
 	{
-		dst[len_dst] = s[i];
-		len_dst++;
-		i++;
+		*d = *s;
+		d++;
+		s++;
 	}
-	dst[len_dst] = '\0';
-	return (res);
+	*d = '\0';
+	return (ft_strlen(src) + dst_n);
 }
 
 int	main(void)
 {
-	char str[10] = "123456789";
-	char str2[6] = "abcde";
+	// char str[10] = "123456789";
+	// char str2[6] = "abcde";
 	char str3[10] = "123456789";
 	char str4[6] = "abcde";
 
-	printf("ft_strlcat:%lu\n", ft_strlcat(NULL, str2, 0));
-	printf("ft_strlcat:%s\n", str);
+	// printf("ft_strlcat:%lu\n", ft_strlcat(NULL, str2, 0));
+	// printf("ft_strlcat:%s\n", str);
 	printf("strlcat:%lu\n", strlcat(NULL, str4, 0));
 	printf("strlcat:%s\n", str3);
 }
