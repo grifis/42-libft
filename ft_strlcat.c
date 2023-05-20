@@ -6,7 +6,7 @@
 /*   By: yutabe <yutabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:12:41 by yutabe            #+#    #+#             */
-/*   Updated: 2023/05/20 20:43:35 by yutabe           ###   ########.fr       */
+/*   Updated: 2023/05/20 20:53:03 by yutabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	int			writable;
 	int			d_n;
 
-	if (dst)
-		d_n = ft_strlen(dst);
-	writable = dstsize - d_n - 1;
-	if (dstsize <= d_n)
+	if (!dst)
+		return (ft_strlen(src));
+	d_n = ft_strlen(dst);
+	if ((int)dstsize <= d_n)
 		return (ft_strlen(src) + dstsize);
 	d = dst;
 	s = src;
 	while (*d != '\0')
 		d++;
+	writable = dstsize - d_n - 1;
 	while (writable-- && *s)
 	{
 		*d = *s;
