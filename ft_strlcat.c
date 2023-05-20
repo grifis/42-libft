@@ -6,7 +6,7 @@
 /*   By: yutabe <yutabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:12:41 by yutabe            #+#    #+#             */
-/*   Updated: 2023/05/20 19:16:18 by yutabe           ###   ########.fr       */
+/*   Updated: 2023/05/20 19:16:53 by yutabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (ft_strlen(src) + dstsize -1);
 	while (limit-- && *s)
 	{
-		printf("ad%s", "ss");
 		*d = *s;
 		d++;
 		s++;
