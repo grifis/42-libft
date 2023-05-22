@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 14:52:55 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/22 17:08:30 by abeyuuta         ###   ########.fr       */
+/*   Created: 2023/05/22 19:57:23 by abeyuuta          #+#    #+#             */
+/*   Updated: 2023/05/22 23:08:22 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 // #include <stdio.h>
 // #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
-  int j;
+	char	*ptr;
+  size_t i;
 
-  i = ft_strlen(s) + 1;
-  j = 0;
-  while (i--)
-  {
-		if (s[j] == (char)c)
-			return ((char *)s + j);
-    j++;
-	}
-	return (NULL);
+  i = ft_strlen(s1) + 1;
+  ptr = malloc(i);
+	if (!ptr)
+		return (NULL);
+	while (i--)
+		ptr[i] = s1[i];
+  return (ptr);
 }
 
-// int main(void)
+// int	main(void)
 // {
-//   printf("ft_strchr:%s\n", ft_strchr("Hello", '\0'));
-//   printf("strchr:%s\n", strchr("Hello", '\0'));
+// 	printf("ft_strdup:%s\n", ft_strdup("Hello"));
+// 	printf("strdup:%s\n", strdup("Hello"));
 // }

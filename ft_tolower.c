@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 14:52:55 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/22 17:08:30 by abeyuuta         ###   ########.fr       */
+/*   Created: 2023/05/22 17:09:45 by abeyuuta          #+#    #+#             */
+/*   Updated: 2023/05/22 17:13:27 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include <ctype.h>
 // #include <stdio.h>
-// #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+int ft_tolower(int c)
 {
-	int	i;
-  int j;
-
-  i = ft_strlen(s) + 1;
-  j = 0;
-  while (i--)
-  {
-		if (s[j] == (char)c)
-			return ((char *)s + j);
-    j++;
-	}
-	return (NULL);
+  if (c >= 65 && c <= 90)
+    return (c + 32);
+  return (c);
 }
 
 // int main(void)
 // {
-//   printf("ft_strchr:%s\n", ft_strchr("Hello", '\0'));
-//   printf("strchr:%s\n", strchr("Hello", '\0'));
+//   printf("ft_tolower:%c\n", ft_tolower('A'));
+//   printf("tolower:%c\n", tolower('A'));
 // }
