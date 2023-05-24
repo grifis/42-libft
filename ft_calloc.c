@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:18:13 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/23 14:05:36 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/24 10:28:34 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int	*ptr;
+	size_t	*ptr;
 
 	if (size > 0 && SIZE_MAX / size < count)
 		return (NULL);
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!ptr)
 		return (NULL);
 	ft_memset(ptr, 0, count * size);
-	return (ptr);
+	return ((void *)ptr);
 }
 
 // int	main(void)
@@ -32,7 +32,7 @@ void	*ft_calloc(size_t count, size_t size)
 // 	int	*ptr;
 // 	int	i;
 
-// 	ptr = ft_calloc((size_t)SIZE_MAX / 10 + (size_t)1, 10);
+// 	ptr = ft_calloc(10, 10);
 // 	i = 0;
 // 	printf("ptr:%p\n", ptr);
 // 	while (i < 10)

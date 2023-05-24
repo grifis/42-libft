@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 14:52:55 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/24 10:30:37 by abe21453@cs      ###   ########.fr       */
+/*   Created: 2023/05/24 10:10:17 by abe21453@cs       #+#    #+#             */
+/*   Updated: 2023/05/24 10:15:08 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-// #include <stdio.h>
-// #include <string.h>
-
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-  size_t j;
-
-  i = ft_strlen(s) + 1;
-  j = 0;
-  while (i--)
-  {
-		if (s[j] == (char)c)
-			return ((char *)s + j);
-    j++;
-	}
-	return (NULL);
+	char *str;
+	int s1_len;
+	int s2_len;
 }
-
-// int main(void)
-// {
-//   printf("ft_strchr:%s\n", ft_strchr("Hello", '\0'));
-//   printf("strchr:%s\n", strchr("Hello", '\0'));
-// }

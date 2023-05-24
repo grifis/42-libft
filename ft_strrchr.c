@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:42:03 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/22 15:58:25 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/24 10:31:29 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = ft_strlen(s) + 1;
 	while (i--)
