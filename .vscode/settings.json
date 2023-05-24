@@ -2,7 +2,7 @@
   "[c]": {
     "editor.defaultFormatter": "keyhr.42-c-format"
   },
-  "cSpell.words": ["LIBFT"],
+  "cSpell.words": ["dstsize", "LIBFT", "strtrim"],
   "files.associations": {
     "string.h": "c",
     "stdio.h": "c"

@@ -6,13 +6,14 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:52:42 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/23 18:14:09 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/24 14:14:58 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+// #include <stdio.h>
+// #include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -55,5 +56,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // 	char *ptr5 = ft_substr(NULL, 50, 11);
 // 	printf("NULLが返却%s\n", ptr5);
+
+// 	char *ptr6 = ft_substr(s, -1, -2055);
+// 	printf("NULLが返却%s\n", ptr6);
 // 	return (0);
 // }
