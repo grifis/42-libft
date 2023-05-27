@@ -3,29 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
+/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 14:52:55 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/24 10:30:37 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/27 10:50:17 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <stdio.h>
 // #include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-  size_t j;
+	size_t	j;
 
-  i = ft_strlen(s) + 1;
-  j = 0;
-  while (i--)
-  {
+	i = ft_strlen(s) + 1;
+	j = 0;
+	while (i--)
+	{
 		if (s[j] == (char)c)
 			return ((char *)s + j);
-    j++;
+		j++;
 	}
 	return (NULL);
 }

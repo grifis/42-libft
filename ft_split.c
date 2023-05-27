@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
+/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 14:27:53 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/26 14:20:13 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/27 10:50:11 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // #include <stdio.h>
 
-void	freeAll(char **result, size_t i)
+void	free_all(char **result, size_t i)
 {
 	while (i--)
 		free(result[i]);
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 		result[i] = (char *)malloc(sizeof(char) * (len + 1));
 		if (result[i] == NULL)
 		{
-			freeAll(result, i);
+			free_all(result, i);
 			return (NULL);
 		}
 		ft_memmove(result[i], s, len);

@@ -6,11 +6,12 @@
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:46:58 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/21 20:52:16 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/27 10:48:11 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <stdio.h>
 // #include <stdlib.h>
 
@@ -55,34 +56,32 @@ int	ft_atoi(const char *str)
 	return ((int)(result * sign));
 }
 
-
-
 // int	main(void)
 // {
-	// 	printf("ft_atoi: %d\n", ft_atoi("123"));
-	// 	printf("atoi: %d\n", atoi("123"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("123a"));
-	// 	printf("atoi: %d\n", atoi("123a"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("a123"));
-	// 	printf("atoi: %d\n", atoi("a123"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("2147483647"));
-	// 	printf("atoi: %d\n", atoi("2147483647"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("-2147483648"));
-	// 	printf("atoi: %d\n", atoi("-2147483648"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("-123"));
-	// 	printf("atoi: %d\n", atoi("-123"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("+ 123"));
-	// 	printf("atoi: %d\n", atoi("+ 123"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
-	// 	printf("atoi: %d\n", atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
-	// 	printf("ft_atoi: %d\n", ft_atoi(" 123"));
-	// 	printf("atoi: %d\n", atoi(" 123"));
-	// 	printf("ft_atoi: %d\n", ft_atoi("123 "));
-	// 	printf("atoi: %d\n", atoi("123 "));
-	// 	printf("ft_atoi: %d\n", ft_atoi(" 123 "));
-	// 	printf("atoi: %d\n", atoi(" 123 "));
-	// 	printf("ft_atoi: %d\n", ft_atoi(" 123 456"));
-	// 	printf("atoi: %d\n", atoi(" 123 456"));
+// 	printf("ft_atoi: %d\n", ft_atoi("123"));
+// 	printf("atoi: %d\n", atoi("123"));
+// 	printf("ft_atoi: %d\n", ft_atoi("123a"));
+// 	printf("atoi: %d\n", atoi("123a"));
+// 	printf("ft_atoi: %d\n", ft_atoi("a123"));
+// 	printf("atoi: %d\n", atoi("a123"));
+// 	printf("ft_atoi: %d\n", ft_atoi("2147483647"));
+// 	printf("atoi: %d\n", atoi("2147483647"));
+// 	printf("ft_atoi: %d\n", ft_atoi("-2147483648"));
+// 	printf("atoi: %d\n", atoi("-2147483648"));
+// 	printf("ft_atoi: %d\n", ft_atoi("-123"));
+// 	printf("atoi: %d\n", atoi("-123"));
+// 	printf("ft_atoi: %d\n", ft_atoi("+ 123"));
+// 	printf("atoi: %d\n", atoi("+ 123"));
+// 	printf("ft_atoi: %d\n", ft_atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
+// 	printf("atoi: %d\n", atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
+// 	printf("ft_atoi: %d\n", ft_atoi(" 123"));
+// 	printf("atoi: %d\n", atoi(" 123"));
+// 	printf("ft_atoi: %d\n", ft_atoi("123 "));
+// 	printf("atoi: %d\n", atoi("123 "));
+// 	printf("ft_atoi: %d\n", ft_atoi(" 123 "));
+// 	printf("atoi: %d\n", atoi(" 123 "));
+// 	printf("ft_atoi: %d\n", ft_atoi(" 123 456"));
+// 	printf("atoi: %d\n", atoi(" 123 456"));
 // 	printf("ft_atoi: %d\n", ft_atoi("922337203685477580711"));
 // 	printf("atoi: %d\n", atoi("922337203685477580711"));
 // }
