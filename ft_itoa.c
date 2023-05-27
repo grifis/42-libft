@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
+/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:35:27 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/26 14:30:00 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/27 01:06:46 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <stdio.h>
 
 void	reverse_string(char *str)

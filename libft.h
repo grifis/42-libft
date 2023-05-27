@@ -6,7 +6,7 @@
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 20:27:56 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/27 00:58:08 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/27 01:09:12 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
 
 #endif
