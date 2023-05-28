@@ -6,7 +6,7 @@
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:35:27 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/27 10:49:16 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/28 23:12:50 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,28 @@ void	reverse_string(char *str)
 	}
 }
 
+char	*initilize_str(int n, long *long_n)
+{
+	char	*str;
+
+	str = malloc(12);
+	if (str == NULL)
+		return (NULL);
+	if (n == 0)
+	{
+		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
+	*long_n = (long)n;
+	if (*long_n < 0)
+	{
+		*str = '-';
+		*long_n *= -1;
+	}
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -39,23 +61,12 @@ char	*ft_itoa(int n)
 	int		i;
 	long	long_n;
 
-	str = malloc(12);
+	str = initilize_str(n, &long_n);
+	if (str == NULL || n == 0)
+		return (str);
 	result = str;
-	if (str == NULL)
-		return (NULL);
-	if (n == 0)
-	{
-		str[0] = '0';
-		str[1] = '\0';
-		return (result);
-	}
-	long_n = (long)n;
 	if (n < 0)
-	{
-		*str = '-';
 		str++;
-		long_n *= -1;
-	}
 	i = 0;
 	while (long_n)
 	{

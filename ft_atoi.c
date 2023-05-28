@@ -6,7 +6,7 @@
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:46:58 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/27 10:48:11 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/28 19:05:36 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,16 @@ int	ft_isspace(int c)
 		return (0);
 }
 
+int	init_sign(const char *str)
+{
+	int	sign;
+
+	sign = 1;
+	if (*str == '-')
+		sign = -1;
+	return (sign);
+}
+
 int	ft_atoi(const char *str)
 {
 	int		sign;
@@ -33,13 +43,8 @@ int	ft_atoi(const char *str)
 		return (0);
 	while (ft_isspace(*str))
 		str++;
-	sign = 1;
-	if (*str == '-')
-	{
-		sign = -1;
-		str++;
-	}
-	else if (*str == '+')
+	sign = init_sign(str);
+	if (*str == '+' || *str == '-')
 		str++;
 	result = 0;
 	while (*str != '\0')
@@ -48,7 +53,7 @@ int	ft_atoi(const char *str)
 			return (result * sign);
 		if (sign == 1 && result > (LONG_MAX - (*str - '0')) / 10)
 			return ((int)LONG_MAX);
-		if (sign == -1 && -result < (LONG_MIN + (*str - '0')) / 10)
+		if (sign == (-1) && (-result) < (LONG_MIN + (*str - '0')) / 10)
 			return ((int)LONG_MIN);
 		result = result * 10 + (*str - '0');
 		str++;

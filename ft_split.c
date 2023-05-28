@@ -6,7 +6,7 @@
 /*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 14:27:53 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/27 10:50:11 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/28 18:36:55 by abeyuuta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,21 @@ size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+char	*create_word(char const *s, char c, size_t *len)
+{
+	char	*word;
+
+	*len = 0;
+	while (s[*len] != c && s[*len] != '\0')
+		(*len)++;
+	word = (char *)malloc(sizeof(char) * (*len + 1));
+	if (word == NULL)
+		return (NULL);
+	ft_memmove(word, s, *len);
+	word[*len] = '\0';
+	return (word);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -60,17 +75,12 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s == c && *s != '\0')
 			s++;
-		len = 0;
-		while (s[len] != c && s[len] != '\0')
-			len++;
-		result[i] = (char *)malloc(sizeof(char) * (len + 1));
+		result[i] = create_word(s, c, &len);
 		if (result[i] == NULL)
 		{
 			free_all(result, i);
 			return (NULL);
 		}
-		ft_memmove(result[i], s, len);
-		result[i][len] = '\0';
 		s += len;
 		i++;
 	}
