@@ -3,87 +3,66 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:35:27 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/28 23:12:50 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:26:25 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-// #include <stdio.h>
-
-void	reverse_string(char *str)
+size_t	count_digits(int n)
 {
-	int		i;
-	int		j;
-	char	tmp;
+	size_t	count;
 
-	i = 0;
-	j = ft_strlen(str) - 1;
-	while (i < j)
-	{
-		tmp = str[i];
-		str[i] = str[j];
-		str[j] = tmp;
-		i++;
-		j--;
-	}
-}
-
-char	*initilize_str(int n, long *long_n)
-{
-	char	*str;
-
-	str = malloc(12);
-	if (str == NULL)
-		return (NULL);
 	if (n == 0)
+		return (1);
+	count = 0;
+	while (n != 0)
 	{
-		str[0] = '0';
-		str[1] = '\0';
-		return (str);
+		n /= 10;
+		count++;
 	}
-	*long_n = (long)n;
-	if (*long_n < 0)
-	{
-		*str = '-';
-		*long_n *= -1;
-	}
-	return (str);
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	char	*result;
-	int		i;
 	long	long_n;
+	size_t	digits;
 
-	str = initilize_str(n, &long_n);
-	if (str == NULL || n == 0)
-		return (str);
-	result = str;
-	if (n < 0)
-		str++;
-	i = 0;
-	while (long_n)
+	digits = count_digits(n);
+	long_n = (long)n;
+	if (long_n < 0)
 	{
-		str[i] = long_n % 10 + '0';
-		long_n /= 10;
-		i++;
+		digits++;
+		long_n *= -1;
 	}
-	reverse_string(str);
-	str[i] = '\0';
-	return (result);
+	if (!(str = malloc(digits + 1)))
+		return (NULL);
+	str[digits] = '\0';
+	while (digits--)
+	{
+		str[digits] = long_n % 10 + '0';
+		long_n /= 10;
+	}
+	if (n < 0)
+		str[0] = '-';
+	return (str);
 }
 
 // int	main(void)
 // {
 // 	printf("%s\n", ft_itoa(+123));
-// 	printf("%s\n", ft_itoa(-123));
+// 	printf("%s\n", ft_itoa(-1234));
 // 	printf("%s\n", ft_itoa(0));
 // 	printf("%s\n", ft_itoa(2147483647));
 // 	printf("%s\n", ft_itoa(-2147483648));
+// 	char *i1 = ft_itoa(-1234);
+// 	printf("i1[5]=NULL? %d\n", i1[5] == '\0');
+// 	printf("abc_%d", ft_memcmp(i1, "-1234", 6));
 // }
