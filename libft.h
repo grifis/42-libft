@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 20:27:56 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/27 10:51:12 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/31 21:35:53 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
 
