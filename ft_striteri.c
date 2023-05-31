@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 16:33:49 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/26 17:26:05 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 17:29:10 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-void	test(unsigned int i, char *c)
-{
-	if (i % 2 == 0)
-		return ;
-	else
-		*c = '1';
-}
+// void	test(unsigned int i, char *c)
+// {
+// 	if (i % 2 == 0)
+// 		return ;
+// 	else
+// 		*c = '1';
+// }
 
 // int	main(void)
 // {
