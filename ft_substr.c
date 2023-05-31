@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:52:42 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/31 17:34:29 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 18:04:01 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
-	size_t s_len;
+	size_t	s_len;
 
-	
 	if (s == NULL)
 		return (NULL);
 	s_len = ft_strlen(s);

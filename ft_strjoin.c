@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 10:10:17 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/31 17:26:37 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 18:05:48 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2_len;
 
 	if (s1 == NULL && s2 == NULL)
-		return ft_strdup("");
-	// *ptr = '\0';
+		return (ft_strdup(""));
 	if (s1 == NULL)
 		return (ft_strdup(s2));
 	if (s2 == NULL)
 		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	if (!(ptr = malloc(s1_len + s2_len + 1)))
+	ptr = malloc(s1_len + s2_len + 1);
+	if (ptr == NULL)
 		return (NULL);
 	ft_strlcpy(ptr, s1, s1_len + 1);
 	ft_strlcat(ptr, s2, s1_len + s2_len + 1);

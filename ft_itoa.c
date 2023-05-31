@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:35:27 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/31 14:26:25 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 18:06:08 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ char	*ft_itoa(int n)
 		digits++;
 		long_n *= -1;
 	}
-	if (!(str = malloc(digits + 1)))
+	str = malloc(digits + 1);
+	if (str == NULL)
 		return (NULL);
 	str[digits] = '\0';
 	while (digits--)
