@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeyuuta <abeyuuta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:46:58 by abeyuuta          #+#    #+#             */
-/*   Updated: 2023/05/28 19:05:36 by abeyuuta         ###   ########.fr       */
+/*   Updated: 2023/05/31 15:09:23 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 	int		sign;
 	long	result;
 
-	if (str == NULL || *str == '\0')
+	if (*str == '\0')
 		return (0);
 	while (ft_isspace(*str))
 		str++;
