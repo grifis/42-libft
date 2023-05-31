@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:42:10 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/19 15:14:55 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 14:57:15 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*p;
-
-	p = (unsigned char *)s;
-	while (n--)
-	{
-		*p = 0;
-		p++;
-	}
+	ft_memset(s, 0, n);
 }
 
 // int	main(void)

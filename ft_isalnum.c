@@ -6,16 +6,18 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 20:20:37 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/19 20:28:34 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 14:59:28 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 // #include <ctype.h>
 // #include <stdio.h>
 
 int	ft_isalnum(int c)
 {
-	if ((48 <= c && c <= 57) || (97 <= c && c <= 122) || (65 <= c && c <= 90))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);
