@@ -6,7 +6,7 @@
 /*   By: abe21453@cs.saisoncard.co.jp <abe21453@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 10:10:17 by abe21453@cs       #+#    #+#             */
-/*   Updated: 2023/05/24 14:14:28 by abe21453@cs      ###   ########.fr       */
+/*   Updated: 2023/05/31 17:26:37 by abe21453@cs      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 
+	if (s1 == NULL && s2 == NULL)
+		return ft_strdup("");
+	// *ptr = '\0';
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	if (s2 == NULL)
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	ptr = malloc(s1_len + s2_len + 1);
-	if (ptr == NULL)
+	if (!(ptr = malloc(s1_len + s2_len + 1)))
 		return (NULL);
-	if (s1 == NULL && s2 == NULL)
-		*ptr = '\0';
-	if (s1 == NULL)
-		ft_strlcpy(ptr, s2, s2_len + 1);
-	else if (s2 == NULL)
-		ft_strlcpy(ptr, s1, s1_len + 1);
-	else
-	{
-		ft_strlcpy(ptr, s1, s1_len + 1);
-		ft_strlcat(ptr, s2, s1_len + s2_len + 1);
-	}
+	ft_strlcpy(ptr, s1, s1_len + 1);
+	ft_strlcat(ptr, s2, s1_len + s2_len + 1);
 	return (ptr);
 }
 
